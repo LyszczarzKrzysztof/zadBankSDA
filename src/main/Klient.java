@@ -1,30 +1,24 @@
 public class Klient {
-    private int numer;
+    private int numerID;
     private String imie;
     private String nazwisko;
+    private RodzajRachunku rodzajRachunku;
 
 
 
-    public Klient(int numer, String imie, String nazwisko){
-        this.numer=numer;
+    public Klient(int numer, String imie, String nazwisko, RodzajRachunku rodzajRachunku){
+        this.numerID=numer;
         this.imie=imie;
         this.nazwisko=nazwisko;
+        this.rodzajRachunku=rodzajRachunku;
 
     }
 
     @Override
     public String toString(){
-        return "Klient numer: "+numer+" nazywa się: "+imie+" "+nazwisko;
+        return "Klient numer: "+numerID+" nazywa się: "+imie+" "+nazwisko+" rodzaj rachunku: "+rodzajRachunku;
     }
 
-
-    public int getNumber() {
-        return numer;
-    }
-
-    public void setNumber(int number) {
-        this.numer = number;
-    }
 
     public String getImie() {
         return imie;
@@ -42,5 +36,19 @@ public class Klient {
         this.nazwisko = nazwisko;
     }
 
+    public int getNumerID() {
+        return numerID;
+    }
 
+    public void setNumerID(int numerID) {
+        this.numerID = numerID;
+    }
+
+    public RodzajRachunku getRodzajRachunku() {
+        return rodzajRachunku;
+    }
+
+    public void setRodzajRachunku(RodzajRachunku rodzajRachunku) {
+        this.rodzajRachunku = rodzajRachunku;
+    }
 }
