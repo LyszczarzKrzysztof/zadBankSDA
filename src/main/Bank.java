@@ -8,6 +8,10 @@ public class Bank {
     List<Rachunek> rachunki = new ArrayList<>();
     List<Klient> listaKlientow= new ArrayList<>();
 
+    public Bank(){
+        this.nazwa=getNazwa();
+    }
+
     public String getNazwa() {
         return nazwa;
     }
@@ -16,7 +20,7 @@ public class Bank {
         this.nazwa = nazwa;
     }
 
-    public boolean addKlient(Klient klient, List listaKlientow){
+    public boolean addKlient(Klient klient){
         if(listaKlientow.contains(klient)){
             System.out.println("Klient jest juz na lisćie.");
             return false;
@@ -29,13 +33,19 @@ public class Bank {
 
 
     //trzeba dodac warunek ze stan konta ma być 0
-    public boolean removeKlient(Klient klient, List listaKlientow){
+    public boolean removeKlient(Klient klient){
         if(listaKlientow.contains(klient)){
             System.out.println("Klient"+klient+" został usunięty");
             return true;
         }else{
             System.out.println("Klienta: "+klient+" nie ma na liście.");
             return false;
+        }
+    }
+
+    public void wypiszKlientow(List listaKlientow){
+        for (Object o: listaKlientow) {
+            System.out.println(o);
         }
     }
 }

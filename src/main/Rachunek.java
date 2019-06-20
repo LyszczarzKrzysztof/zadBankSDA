@@ -1,7 +1,7 @@
 public class Rachunek {
 
     private int iban;
-    private String rodzajRachunku;
+    private RodzajRachunku rodzajRachunku;
     private double stanRachunku;
 
     public int getIban() {
@@ -12,11 +12,11 @@ public class Rachunek {
         this.iban = iban;
     }
 
-    public String getRodzajRachunku() {
+    public RodzajRachunku getRodzajRachunku() {
         return rodzajRachunku;
     }
 
-    public void setRodzajRachunku(String rodzajRachunku) {
+    public void setRodzajRachunku(RodzajRachunku rodzajRachunku) {
         this.rodzajRachunku = rodzajRachunku;
     }
 
