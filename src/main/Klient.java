@@ -2,19 +2,19 @@ public class Klient {
     private int numer;
     private String imie;
     private String nazwisko;
-    private boolean madry;
 
 
-    public Klient(int numer, String imie, String nazwisko, boolean madry ){
+
+    public Klient(int numer, String imie, String nazwisko){
         this.numer=numer;
         this.imie=imie;
         this.nazwisko=nazwisko;
-        this.madry=madry;
+
     }
 
     @Override
     public String toString(){
-        return "Klient numer: "+numer+" nazywa się: "+imie+" "+nazwisko+" Czy madry?: "+madry;
+        return "Klient numer: "+numer+" nazywa się: "+imie+" "+nazwisko;
     }
 
 
@@ -42,11 +42,5 @@ public class Klient {
         this.nazwisko = nazwisko;
     }
 
-    public boolean isMadry() {
-        return madry;
-    }
 
-    public void setMadry(boolean madry) {
-        this.madry = madry;
-    }
 }
