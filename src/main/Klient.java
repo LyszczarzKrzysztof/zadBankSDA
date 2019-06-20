@@ -1,18 +1,29 @@
 public class Klient {
-    private int number;
+    private int numer;
     private String imie;
     private String nazwisko;
     private boolean madry;
 
 
-    public
+    public Klient(int numer, String imie, String nazwisko, boolean madry ){
+        this.numer=numer;
+        this.imie=imie;
+        this.nazwisko=nazwisko;
+        this.madry=madry;
+    }
+
+    @Override
+    public String toString(){
+        return "Klient numer: "+numer+" nazywa się: "+imie+" "+nazwisko+" Czy madry?: "+madry;
+    }
+
 
     public int getNumber() {
-        return number;
+        return numer;
     }
 
     public void setNumber(int number) {
-        this.number = number;
+        this.numer = number;
     }
 
     public String getImie() {
